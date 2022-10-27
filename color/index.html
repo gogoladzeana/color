@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <div class="color">
+        <span id="span" >#ff9ca6</span>
+        <button onclick="GetNewColor()">Get new color</button>
+    </div>
+    <script type="text/javascript">
+        function GetNewColor() {
+            var color, symbolo
+            symbolo ="0123456789ABCDEF"
+            color="#"
+            for (var i = 0; i < 6; i++) {
+               color = color + symbolo [Math.floor(Math.random()*16)];
+            }
+              
+            document.body.style.background = color;
+        }
+        
+    </script>
+</body>
+</html>
